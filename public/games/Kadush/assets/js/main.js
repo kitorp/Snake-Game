@@ -1,0 +1,12 @@
+var game;
+var dx,dy;
+//dx=window.innerWidth * window.devicePixelRatio;
+//dy=window.innerHeight * window.devicePixelRatio;
+dx=400;
+dy=600;
+game = new Phaser.Game(dx, dy, Phaser.AUTO, '');
+//Phaser.ScaleManager.EXACT_FIT = 1;
+game.state.add('Menu', Menu);
+game.state.add('Game', Game);
+game.state.add('Game_Over', Game_Over);
+game.state.start('Menu');
